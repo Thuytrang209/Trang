@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Trang.Class_Student;
 
 namespace Trang
 {
@@ -14,6 +15,13 @@ namespace Trang
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Student sv_A = new Student();
+            sv_A.Name = "Trang";
+            MessageBox.Show(sv_A.Name);
         }
     }
 }
