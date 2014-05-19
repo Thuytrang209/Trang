@@ -20,8 +20,9 @@ namespace Trang
         private void Form1_Load(object sender, EventArgs e)
         {
             Student sv_A = new Student();
-            sv_A.Name = "Trang";
-            MessageBox.Show(sv_A.Name);
+            sv_A.Name = " Trang";
+            sv_A.Password = "12345";
+            MessageBox.Show(sv_A.Name + "\r\n" + "Password: " + sv_A.Password);
         }
     }
 }
