@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Security.Cryptography;
 
-namespace Trang.Class_Student
+namespace Trang.Class
 {
     class Student
     {
@@ -19,13 +19,31 @@ namespace Trang.Class_Student
             {
             get
             {
-                return "sinh viên" + this._name;
+                return this._name;
             }
         set 
             {
                 this._name = value;
             }
         }
+
+        /**
+         * ID
+         * 
+         * ID student
+         * @acess public
+         * @ID int
+        **/
+        private int _ID;
+        public int ID { get; set; }
+        
+        /**
+         * Password
+         * 
+         * password to login in system
+         * @acees public
+         * @Password string
+         **/
 
         private string _password;
         public string Password
@@ -40,6 +58,18 @@ namespace Trang.Class_Student
                 byte[] hassbyte = hassword.ComputeHash(Encoding.UTF8.GetBytes(value));
                 this._password = Convert.ToBase64String(hassbyte);
             }
+        }
+        /**
+         * khởi tạo
+         * 
+         **/
+
+        public Student(string Name, int ID, string password)
+        {
+            this.Name = Name;
+            this.ID = ID;
+            this.Password = password;
+
         }
 
     }
