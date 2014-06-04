@@ -21,22 +21,23 @@ namespace Trang
         private void Form2_Load(object sender, EventArgs e)
         {
             DatabaseConnect connect = new DatabaseConnect();
-            //MessageBox.Show(connect.statusConnect + "_____" + connect.Error);
+            MessageBox.Show(connect.statusConnect + "_____" + connect.Error);
+            
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (txtServer.Text == @"DANGTRANG\SQLEXPRESS" & txtUser.Text == "Thuy Trang" & txtPass.Text == "123")
-            {
-                //MessageBox.Show(connect.statusConnect + "_____" + connect.Error);
-                MessageBox.Show("thành công");
-            }
-            else
-            {
-                MessageBox.Show("lỗi");
-            }
-        }
+        //private void button1_Click(object sender, EventArgs e)
+        //{
+        //    if (txtServer.Text == @"DANGTRANG\SQLEXPRESS" & txtUser.Text == "Thuy Trang" & txtPass.Text == "123")
+        //    {
+        //        //MessageBox.Show(connect.statusConnect + "_____" + connect.Error);
+        //        MessageBox.Show("thành công");
+        //    }
+        //    else
+        //    {
+        //        MessageBox.Show("lỗi");
+        //    }
+        //}
 
     }
 }
